@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: stripe
+    database: dbt-demo-427101
+    schema: stripe
+    tables:
+      - name: payments
+        freshness:
+          warn_after: { count: 6, period: hour }
+          error_after: { count: 36, period: hour }
