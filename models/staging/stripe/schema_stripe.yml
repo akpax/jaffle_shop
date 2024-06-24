@@ -1,0 +1,12 @@
+version: 2
+
+models: 
+  - name: stg_stripe_payments
+    description: one payment per row
+    columns:
+      - name: amount
+        description: converted from cents to dollars
+      - name: payment_id
+        description: primary key
+      - name: order_id
+        description: foreign key
